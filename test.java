@@ -9,7 +9,7 @@ public class test {
         String x = scan.nextLine();
         System.out.println ("Число в двоимном формате " + Integer.parseInt(x,2));
         */
-       //ЗАДАЧА 5: Таблица умножения 
+       //ЗАДАЧА 5: Таблица умножения
         System.out.println("Введите число от 1 до 10 для таблицы умножения");
         Scanner scan = new Scanner (System.in);
         int x = scan.nextInt();
