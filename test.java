@@ -39,7 +39,7 @@ public class test {
         if (v>3) System.out.println("Программа выполнена корректно" );
         */
         //Задача №7: Условие вывода данных
-        Scanner scan = new Scanner (System.in);
+        /*Scanner scan = new Scanner (System.in);
         int X = 4, Y = 7, Z = 5;
         int A = scan.nextInt();
         if (X==A||Y==A||Z==A)
@@ -49,7 +49,12 @@ public class test {
         else
         {
             System.out.println ("Такой константы нет!");
-        }
+        }*/
+        //Задача №8: Цикличный вывод данных на экран
+        /*for (int i = 1; i < 51; i++)
+        System.out.println(i);
+        */
+
 
     }
 }
