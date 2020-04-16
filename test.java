@@ -54,7 +54,18 @@ public class test {
         /*for (int i = 1; i < 51; i++)
         System.out.println(i);
         */
-
+        //Задание №9: Ввод/вывод данных для массива
+        Scanner scan = new Scanner (System.in);
+        System.out.println("Задайте размер массива");
+        int [] number = new int [scan.nextInt()];
+        System.out.println("Заполните массив данными введя " + number.length + " чисел.");
+        for (int a = 0; a <number.length;a++) {
+            number[a] = scan.nextInt();
+        }
+        for (int i = 0; i < number.length; i ++)
+        {
+            System.out.println (number[i] * 2);
+        }
 
     }
 }
