@@ -27,7 +27,7 @@ public class test {
 
          */
         // ЗАДАЧА 6: Отработка арифметических операций
-        Scanner scan = new Scanner (System.in);
+        /* Scanner scan = new Scanner (System.in);
         Scanner scan2 = new Scanner (System.in);
         Scanner scan3 = new Scanner (System.in);
         int x = scan.nextInt();
@@ -37,7 +37,19 @@ public class test {
         System.out.println(x+z+c/3);
         System.out.println(v);
         if (v>3) System.out.println("Программа выполнена корректно" );
-
+        */
+        //Задача №7: Условие вывода данных
+        Scanner scan = new Scanner (System.in);
+        int X = 4, Y = 7, Z = 5;
+        int A = scan.nextInt();
+        if (X==A||Y==A||Z==A)
+        {
+            System.out.println ("Данное значение имеется в конcтантах");
+        }
+        else
+        {
+            System.out.println ("Такой константы нет!");
+        }
 
     }
 }
