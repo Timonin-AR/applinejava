@@ -55,7 +55,7 @@ public class test {
         System.out.println(i);
         */
         //Задание №9: Ввод/вывод данных для массива
-        Scanner scan = new Scanner (System.in);
+        /*Scanner scan = new Scanner (System.in);
         System.out.println("Задайте размер массива");
         int [] number = new int [scan.nextInt()];
         System.out.println("Заполните массив данными введя " + number.length + " чисел.");
@@ -67,6 +67,29 @@ public class test {
             System.out.println (number[i] * 2);
         }
 
+         */
+        //Задание №10: Ввод/вывод данных для матрицы
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Задайте размер матрицы: ");
+        int[][] number = new int[scan.nextInt()][scan.nextInt()];
+        System.out.println("Заполните матрицу данными ");
+        for (int a = 0; a < number.length; a++) {
+            for (int i = 0; i < number[a].length; i++) {
+                number[a][i] = scan.nextInt();
+            }
+            for (int q = 0; q < number.length; q++) {  //идём по строкам
+                for (int j = 0; j < number.length; j++) {//идём по столбцам
+                    System.out.print(" " + number[q][j] + " "); //вывод элемента
+                }
+                System.out.println();//перенос строки ради визуального сохранения табличной формы
+            }
+            for (int q = 0; q < 1; q++) {
+                for (int j = 0; j < number[a].length; j++) {
+                    number[a][j] = number[a][j] * 3;
+                }
+            }
+
+        }
     }
 }
 
