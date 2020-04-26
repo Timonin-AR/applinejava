@@ -1,4 +1,8 @@
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class test {
     public static void main(String args[]) {
@@ -69,7 +73,7 @@ public class test {
 
          */
         //Задание №10: Ввод/вывод данных для матрицы
-        Scanner scan = new Scanner(System.in);
+        /*Scanner scan = new Scanner(System.in);
         System.out.println("Задайте размер матрицы: ");
         int[][] number = new int[scan.nextInt()][scan.nextInt()];
         System.out.println("Заполните матрицу данными ");
@@ -84,12 +88,53 @@ public class test {
                 System.out.println();//перенос строки ради визуального сохранения табличной формы
             }
             for (int q = 0; q < 1; q++) {
-                for (int j = 0; j < number[a].length; j++) {
-                    number[a][j] = number[a][j] * 3;
+                for (int j = 0; j < number[q].length; j++) {
+                    number[q][j] = number[q][j] * 3;
                 }
             }
-
         }
+        */
+        /*
+        //ЗАДАНИЕ 11
+        Scanner scan = new Scanner(System.in);
+        String str = scan.nextLine ();
+        System.out.println(str);
+
+         */
+        /*
+        //ЗАДАНЕ 12
+        Scanner scan = new Scanner(System.in);
+        String str = scan.nextLine ();
+        System.out.print(str.replaceAll(" ",""));
+        */
+
+        /*
+        //ЗАДАНИЕ 13
+        Scanner scan = new Scanner(System.in);
+        String str = scan.nextLine ();
+        String str2 = scan.nextLine ();
+        if (str.length()>str2.length())
+        {
+         System.out.println(str);
+        }
+        else if (str.length()<str2.length()){
+            System.out.println(str2);
+        }
+        else if (str.length()==str2.length()){
+            System.out.println("Длины равны");
+        }
+
+         */
+        //ЗАДАНИЕ 14
+        Scanner scan = new Scanner(System.in);
+        String S = scan.nextLine();
+        System.out.println(S+" - строка");
+        int X = Integer.parseInt(S);
+        System.out.println(X+" - число");
+        double Y = Double.parseDouble(S);
+        System.out.println(Y+" - double");
+
+
     }
 }
 
