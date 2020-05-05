@@ -1,11 +1,11 @@
+import java.io.*;
 import java.util.Scanner;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Arrays;
 
+
+
 public class test {
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException {
        /*
        ЗАДАЧА 4: Обработка поразрядных операций
         System.out.println ("Введите число в бинарном формате");
@@ -70,37 +70,15 @@ public class test {
         {
             System.out.println (number[i] * 2);
         }
-
-         */
-        //Задание №10: Ввод/вывод данных для матрицы
-        /*Scanner scan = new Scanner(System.in);
-        System.out.println("Задайте размер матрицы: ");
-        int[][] number = new int[scan.nextInt()][scan.nextInt()];
-        System.out.println("Заполните матрицу данными ");
-        for (int a = 0; a < number.length; a++) {
-            for (int i = 0; i < number[a].length; i++) {
-                number[a][i] = scan.nextInt();
-            }
-            for (int q = 0; q < number.length; q++) {  //идём по строкам
-                for (int j = 0; j < number.length; j++) {//идём по столбцам
-                    System.out.print(" " + number[q][j] + " "); //вывод элемента
-                }
-                System.out.println();//перенос строки ради визуального сохранения табличной формы
-            }
-            for (int q = 0; q < 1; q++) {
-                for (int j = 0; j < number[q].length; j++) {
-                    number[q][j] = number[q][j] * 3;
-                }
-            }
-        }
         */
+
         /*
         //ЗАДАНИЕ 11
         Scanner scan = new Scanner(System.in);
         String str = scan.nextLine ();
         System.out.println(str);
-
          */
+
         /*
         //ЗАДАНЕ 12
         Scanner scan = new Scanner(System.in);
@@ -123,9 +101,10 @@ public class test {
         else if (str.length()==str2.length()){
             System.out.println("Длины равны");
         }
-
          */
+
         //ЗАДАНИЕ 14
+        /*
         Scanner scan = new Scanner(System.in);
         String S = scan.nextLine();
         System.out.println(S+" - строка");
@@ -133,8 +112,203 @@ public class test {
         System.out.println(X+" - число");
         double Y = Double.parseDouble(S);
         System.out.println(Y+" - double");
+         */
+
+        /*
+        //ЗАДАНИЕ 10 переписанное
+        multiply(createMatrix());
+        }
+        public static int[][] createMatrix() throws IOException {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("Введите размер матрицы X");
+            int sizeX = Integer.parseInt(reader.readLine());
+            System.out.println("Введите размер матрицы Y");
+            int sizeY = Integer.parseInt(reader.readLine());
+
+            int[][] matrix = new int[sizeX][sizeY];
+            System.out.println("Заполните матрицу значениями");
+            for (int i = 0; i < sizeX; i++) {
+                for (int j = 0; j < sizeY; j++) {
+                    System.out.println(String.format("Введите число в ячейку [%s][%s]", i, j));
+                    matrix[i][j] = Integer.parseInt(reader.readLine());
+                }
+            }
+            return matrix;
+        }
+        public static void multiply(int[][] matrix){
+            for (int i = 0; i < 1; i++) {
+                for (int j = 0; j < matrix[i].length; j++) {
+                    matrix[i][j] = matrix[i][j] * 3;
+                }
+            }
+            for (int[] ints : matrix) {
+                for (int anInt : ints) {
+                    System.out.print("[" + anInt + "]");
+                }
+                System.out.println("");
+            }
+        }
+         */
+
+        /*
+        //Задача №15: Сортировка данных в массиве
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Задайте размер массива");
+        int[] number = new int[scan.nextInt()];
+        System.out.println("Заполните массив данными введя " + number.length + " чисел.");
+        for (int a = 0; a < number.length; a++) {
+            number[a] = scan.nextInt();
+        }
+        for (int i = 0; i < number.length; i++) {
+            System.out.print(number[i] + " ");
+        }
+        System.out.println( "\nСортировка пузырьком");
+
+            for (int i = number.length - 1; i > 0; i--) {
+                for (int j = 0; j < i; j++) {
+
+                    if (number[j] > number[j + 1]) {
+                        int tmp = number[j];
+                        number[j] = number[j + 1];
+                        number[j + 1] = tmp;
+                    }
+                }
+            }
+        for (int i = 0; i < number.length; i++) {
+            System.out.print(number[i] + " ");
+        }
+         */
+
+        /*
+        //Задача №16: Выгрузка данных из файла на экран
+        String read;
+        try (BufferedReader Bread = new BufferedReader (new FileReader("D:\\test.txt")))
+        {
+            while ((read = Bread.readLine()) !=null) {
+                System.out.println(read);}
+        }
+        catch (IOException exc)
+        {
+            System.out.println("Ошибка ввода-вывода: " + exc);
+        }
+        */
+
+        /*
+        //Задача №17: Запись данных в файл
+        String str;
+        BufferedReader Bstr = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Признак конца ввода - строка 'stop' ");
+        try (FileWriter fw = new FileWriter ( "D:\\test.txt"))
+            {
+                do {
+                    System.out.print(": ");
+                    str = Bstr.readLine();
+
+                    if (str.compareTo("stop") == 0) break;
+
+                        str = str + "\r\n";
+                        fw.write(str);
+                }
+                while (str.compareTo("stop") != 0);
+
+            } catch (IOException exc)
+        {
+            System.out.println("Ошибка ввода-вывода: "+exc);
+        }
+        */
+
+        /*
+        //Задача №18: Выгрузка данных из файла, проверка и перезапись
+        System.out.println("Файл содержит текст:");
+         String s;
+        int a = 0;
+        int b = 0;
+        System.out.println("Вывод текста из файла:\n");
+        try (BufferedReader br = new BufferedReader(new FileReader("D:\\test.txt"))) {
+            while ((s = br.readLine()) != null) {
+                System.out.println(s);
+                ++a;
+            }
+        } catch (IOException exc) {
+            System.out.println("Ошибка ввода вывода:" + exc);
+        }
+        System.out.println(a);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Необходимо ввести текст:\n");
+        try (FileWriter fw = new FileWriter("D:\\test.txt")) {
+            do {
+                b++;
+                System.out.println(": ");
+                s = br.readLine();
+                if (b > a) break;
+                s = s + "\r\n";
+                fw.write(s);
+            } while (b < a);
+        } catch (IOException exc) {
+            System.out.println("Ошибка ввода вывода:" + exc);
+        }
+        System.out.println(b);
+        */
+
+        /*
+        //ИТОГОВАЯ ЗАДАЧА 1
+        BufferedReader Bstr = new BufferedReader(new InputStreamReader(System.in));
+        String str = Bstr.readLine();
+        int n = 0;
+        for (int i = str.length() - 1, j = 1; i >= 0; i--, j *= 2) {
+            n += (str.charAt(i) - '0') * j;
+        }
+        System.out.println("\"" + str + "\" -> " + n);
+        */
+
+        /*
+        //Итоговая задача №2
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Задайте размер массива");
+        int[] number = new int[scan.nextInt()];
+        System.out.println("Заполните массив данными введя " + number.length + " чисел.");
+        for (int a = 0; a < number.length; a++) {
+            number[a] = scan.nextInt();
+        }
+        for (int i = 0; i < number.length; i++) {
+            System.out.print(number[i] + " ");
+        }
+        for (int left = 0; left < number.length; left++) {
+            int value = number[left];
+            int i = left - 1;
+            for (; i >= 0; i--) {
+                if (value < number[i]) {
+                    number[i + 1] = number[i];
+                } else {
+                    break;
+                }
+            }
+            number[i + 1] = value;
+        }
+        System.out.println(Arrays.toString(number));
+         */
+
+
+        //Итоговая задача №3
+        System.out.println("Введите текущий курс доллара");
+        Scanner scan = new Scanner(System.in);
+        double a = scan.nextDouble();
+        System.out.println("Курс доллара: "+ a);
+        System.out.println("Введите количество рублей");
+        Scanner scan2 = new Scanner(System.in);
+        double b = scan2.nextDouble();
+        System.out.println("Количество рублей: "+b);
+        double c = b/a;
+        System.out.println("По текущему курсу у вас будет: "+(double) Math.round (c*100d)/100d + " Долларов");
 
 
     }
 }
+
+
+
+
+
+
+
 
